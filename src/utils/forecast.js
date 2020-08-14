@@ -11,7 +11,7 @@ const forecast = (address, callback) => {
     } else {
       callback(undefined, {
         forecast: body.current.weather_descriptions[0],
-        temperature: `It is currently ${body.current.temperature} degrees out. There is a ${body.current.precip}% chance of rain.`,
+        temperature: `It is currently ${body.current.temperature} degrees out. There is a ${body.current.precip}% chance of rain, the weather is ${body.current.weather_descriptions[0]}`,
         location: `${body.location.name}, ${body.location.country}`
       });
     }
